@@ -1,48 +1,39 @@
 import React from "react";
-import Book1 from "../../assets/books/book1.jpg";
-import Book2 from "../../assets/books/book2.jpg";
-import Book3 from "../../assets/books/book3.jpg";
+import book2 from "../../assets/books/book2.jpg";
+import book1 from "../../assets/books/book1.jpg";
+import book3 from "../../assets/books/book3.jpg";
 import { FaStar } from "react-icons/fa6";
+
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const booksData = [
   {
     id: 1,
-    img: Book1,
-    title: "Who's there",
+    img: book1,
+    title: " Trusted Source of Hadith",
     rating: 5.0,
     author: "Someone",
   },
   {
     id: 2,
-    img: Book2,
-    title: "His Life",
+    img: book2,
+    title: "Balancing Faith and Life",
     rating: 4.5,
-    author: "John",
+    author: "Some one",
   },
   {
     id: 3,
-    img: Book3,
-    title: "Lost boys",
+    img: book3,
+    title: " Science Behind Hadith",
     rating: 4.7,
-    author: "Lost Girl",
+    author: "Some one",
   },
-  {
-    id: 4,
-    img: Book2,
-    title: "His Life",
-    rating: 4.4,
-    author: "Someone",
-  },
-  {
-    id: 5,
-    img: Book1,
-    title: "Who's There",
-    rating: 4.5,
-    author: "Someone",
-  },
+ 
 ];
 
 const Books = () => {
+  const navigate = useNavigate();
   return (
     <>
       <div className="mt-14 mb-12">
@@ -82,10 +73,12 @@ const Books = () => {
               ))}
             </div>
             <div className="flex justify-center">
-              <button className="text-center mt-10 cursor-pointer  bg-primary text-white py-1 px-5 rounded-md">
-                View All Books
-              </button>
-            </div>
+            <Link to="/all-books">
+  <button className="text-center mt-10 cursor-pointer bg-primary text-white py-1 px-5 rounded-md">
+    View All Books
+  </button>
+</Link>
+</div>
           </div>
         </div>
       </div>

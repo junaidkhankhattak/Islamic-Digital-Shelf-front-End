@@ -8,21 +8,21 @@ const ImageList = [
   {
     id: 1,
     img: Book1,
-    title: "His Life will forever be Changed",
+    title: "Balancing Faith and Life ",
     description:
       "lorem His Life will forever be Changed dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     id: 2,
     img: Book2,
-    title: "Who's there",
+    title: "Trusted Source of Hadith",
     description:
       "Who's there lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     id: 3,
     img: Book3,
-    title: "Lost Boy",
+    title: "Science Behind Hadith",
     description:
       "Lost Boy, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
@@ -32,15 +32,14 @@ const Hero = ({ handleOrderPopup }) => {
   const [imageId, setImageId] = React.useState(Book1);
   const [title, setTitle] = React.useState("His Life will forever be Changed");
   const [description, setDescription] = React.useState(
-    "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-  );
+    "Access authentic Islamic books online read, learn, and order from the Islamic Digital Shelf.");
 
   const bgImage = {
     backgroundImage: `url(${Vector})`,
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
-    // height: "100%",
+   
     width: "100%",
   };
 
@@ -64,9 +63,7 @@ const Hero = ({ handleOrderPopup }) => {
                 className="text-5xl sm:text-6xl lg:text-7xl font-bold"
               >
                 {title}
-                <p class="bg-clip-text text-transparent bg-gradient-to-b from-primary text-right text-sm to-secondary">
-                  by Anonymous
-                </p>{" "}
+                
               </h1>
               <p
                 data-aos="slide-up"
@@ -99,6 +96,7 @@ const Hero = ({ handleOrderPopup }) => {
               <div className="flex lg:flex-col lg:top-1/2 lg:-translate-y-1/2 lg:py-2 justify-center gap-4 absolute -bottom-[40px] lg:-right-1 bg-white rounded-full">
                 {ImageList.map((item) => (
                   <img
+                     key={item.id}
                     data-aos="zoom-in"
                     data-aos-once="true"
                     src={item.img}
