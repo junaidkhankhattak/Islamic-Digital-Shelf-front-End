@@ -1,9 +1,47 @@
-# React + Vite
+# Islamic Digital Shelf – Frontend
 
-Enjoy the Free code + Assets 😍 
-- Support us on YouTube Channel: https://www.youtube.com/channel/UC1H-a1MKEFXRiFlGNLcy7gQ
+This is the frontend for the **Islamic Digital Shelf** project, built using **React.js**.  
+It allows users to explore, search, download, and order Islamic books with an intuitive interface.
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React.js
+- Axios
+- Tailwind CSS / Bootstrap (if used)
+- React Router
+- Google Drive (for file links)
+
+## 📁 Project Structure
+/book-store
+│
+├── public/
+├── src/
+│ ├── components/
+│ ├── pages/
+│ ├── services/
+│ └── App.js
+│
+├── package.json
+└── README.md
+
+## 🔧 Features
+
+- View all books with images and titles
+- Search functionality
+- Book downloading (from Google Drive)
+- Order placement form
+- Admin Dashboard (for managing books and orders)
+
+## 🌐 API Integration
+
+Communicates with the Spring Boot backend hosted at:
+http://localhost:8080/api/books
+http://localhost:8080/api/orders
+
+## 📦 Installation
+
+```bash
+npm install
+npm start
+
+
